@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array Dinâmico</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  #value {
+    width: 200px;
+  }
+
+  #addButton {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  #sortedList {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+  }
+
+  #sortedList li {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+  <h2>Adicionar Valores ao Array</h2>
+  <form id="arrayForm">
+    <label for="value">Novo Valor:</label>
+    <input type="text" id="value" name="value">
+    <button type="button" id="addButton">Adicionar</button>
+  </form>
+  
+  <h2>Valores Cadastrados em Ordem Alfabética</h2>
+  <ul id="sortedList"></ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const addButton = document.getElementById('addButton');
+      const sortedList = document.getElementById('sortedList');
+      const valueInput = document.getElementById('value');
+      const valuesArray = [];
+
+      addButton.addEventListener('click', function() {
+        const newValue = valueInput.value.trim();
+        if (newValue) {
+          valuesArray.push(newValue);
+          valueInput.value = '';
+          displaySortedValues();
+        }
+      });
+
+      function displaySortedValues() {
+        sortedList.innerHTML = '';
+        const sortedValues = [...valuesArray].sort(function(a, b) {
+          return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+        });
+        sortedValues.forEach(function(value) {
+          const listItem = document.createElement('li');
+          listItem.textContent = value;
+          sortedList.appendChild(listItem);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
