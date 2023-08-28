@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<html>
+<body onload="startTime()">
+
+<h1>Hora Atualizada</h1>
+
+<p id="atualizada"></p>
+
+<script>
+function startTime() {
+  const date = new Date();
+  document.getElementById("atualizada").innerHTML = date.toLocaleTimeString();
+  setTimeout(function() {startTime()}, 1000);
+}
+</script>
+
+</body>
+</html>
