@@ -1,0 +1,140 @@
+
+body {
+    font-family: Helvetica;
+}
+
+
+form {
+    width: 600px;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+
+.sep-1,
+.sep-2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.sep-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sub-sep-1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+
+.input-name,
+.input-email,
+.input-data-nascimento,
+.input-fixo,
+.input-celular,
+.input-area,
+.input-curso,
+.input-matricula,
+.input-lattes {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-email {
+    width: 65%;
+}
+
+.input-data-nascimento {
+    width: 30%;
+}
+
+.input-fixo,
+.input-celular,
+.input-tipo {
+    width: 30%;
+}
+
+.input-tipo {
+    margin-top: 15px;
+}
+
+.input-area,
+.input-curso,
+.input-matricula,
+.input-lattes {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+
+.input-area label,
+.input-curso label,
+.input-matricula label,
+.input-lattes label,
+.input-area input,
+.input-curso input,
+.input-matricula input,
+.input-lattes input {
+    width: 100%;
+}
+
+.input-area,
+.input-curso {
+    width: 50%;
+}
+
+.action {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+.hide-item {
+    display: none;
+}
+
+
+.input-lattes,
+label {
+    margin-top: 10px;
+}
+
+
+input[type=submit],
+input[type=reset] {
+    width: 100px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+input[type=text],
+input[type=date] {
+    height: 30px;
+    border-radius: 5px;
+}
+
+input[type=date] {
+    border: 1px solid lightgray;
+}
+
+input[type=text] {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 3px solid lightgray;
+}

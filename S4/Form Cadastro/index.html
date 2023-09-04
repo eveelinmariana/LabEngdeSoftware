@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <a href="../index.html">Voltar</a> <br /><br />
+
+    <form>
+        <h1>Formulário de Cadastro:</h1>
+
+        <div class="input-name">
+            <label for="name">Nome</label>
+            <input 
+                type="text" 
+                id="name" 
+                placeholder="Digite seu nome completo" 
+            />
+        </div>
+
+        <div class="sep-1">
+            <div class="input-email">
+                <label for="email">E-mail</label>
+                <input 
+                    type="text" 
+                    id="email" 
+                    placeholder="email@dominio.com" 
+                />
+            </div>
+    
+            <div class="input-data-nascimento">
+                <label for="data-nascimento">Data Nascimento</label>
+                <input type="date" id="data-nascimento" />
+            </div>
+        </div>
+
+        <div class="sep-2">
+            <div class="input-fixo">
+                <label for="fixo">Telefone Fixo</label>
+                <input 
+                    type="text" 
+                    id="fixo" 
+                    placeholder="(99) 9999-9999"
+                />
+            </div>
+    
+            <div class="input-celular">
+                <label for="celular">Telefone Celular</label>
+                <input 
+                    type="text" 
+                    id="celular" 
+                    placeholder="(99) 99999-9999"
+                />
+            </div>
+    
+            <div class="input-tipo">
+                <input id="professor" type="radio" name="tipo-agente" value="professor" />
+                <label for="professor">Professor</label> <br />
+                
+                <input id="aluno" type="radio" name="tipo-agente" value="aluno" />
+                <label for="aluno">Aluno</label>
+            </div>
+        </div>
+
+        <div class="sep-3">
+            <div class="sub-sep-1">
+                <div id="area-area" class="input-area hide-item">
+                    <label for="area">Área</label>
+                    <input 
+                        type="text"
+                        id="area"
+                        placeholder="Digite sua área de atuação"
+                    >
+                </div>
+        
+                <div id="area-curso" class="input-curso hide-item">
+                    <label for="curso">Curso</label>
+                    <input 
+                        type="text" 
+                        id="curso" 
+                        placeholder="Digite seu curso"
+                    />
+                </div>
+        
+                <div id="area-matricula" class="input-matricula hide-item">
+                    <label for="matricula">Matricula</label>
+                    <input 
+                        type="text" 
+                        id="matricula" 
+                        placeholder="Digite sua matricula"
+                    />
+                </div>
+            </div>
+
+            <div id="area-lattes" class="input-lattes hide-item">
+                <label for="lattes">Lattes</label>
+                <input 
+                    type="text"
+                    id="lattes"
+                    placeholder="Digite aqui o endereço para seu Lattes"
+                >
+            </div>
+        </div>
+
+        <div class="action">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Redefinir">
+        </div>
+    </form>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

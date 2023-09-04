@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <a href="../index.html">Voltar</a> <br /><br />
+
+    <h1>Dados do Carro</h1>
+    <form id="carForm">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca"><br>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo"><br>
+
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano" name="ano"><br>
+
+        <label for="cor">Cor:</label>
+        <input type="text" id="cor" name="cor"><br>
+
+        <label for="kilometragem">Kilometragem:</label>
+        <input type="number" id="kilometragem" name="kilometragem"><br>
+
+        <label for="valor_fipe">Valor FIPE:</label>
+        <input type="number" id="valor_fipe" name="valor_fipe"><br>
+
+        <input type="button" value="Calcular" onclick="calcularDados()">
+    </form>
+
+    <div id="resultado">
+        <p><strong>Anos de Utilização:</strong> <span id="anos_utilizacao"></span></p>
+        <p><strong>Valor de Mercado:</strong> R$ <span id="valor_mercado"></span></p>
+    </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

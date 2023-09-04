@@ -3,15 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio de Engenharia de Software </title>
+    <title>Laboratorio de Engenharia de Software</title>
+
+    <!-- Adicione o link para o arquivo Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        /* CSS personalizado para fundo escuro e interação */
+        body {
+            background-color: #333; /* Cor de fundo escura */
+            color: #fff; /* Cor do texto */
+        }
+
+        /* Estilo para links não visitados */
+        .navbar a {
+            color: #fff;
+        }
+
+        /* Estilo para links visitados */
+        .navbar a:visited {
+            color: #aaa; /* Cor dos links visitados */
+        }
+
+        /* Estilo para links quando hover (passar o mouse por cima) */
+        .navbar a:hover {
+            color: #ccc; /* Cor dos links ao passar o mouse por cima */
+        }
+    </style>
 </head>
 <body>
-    <h1>ATIVIDADES 1º SEMESTRE</h1>
-    <nav>
-        <ul>
-            <li><a href="S1/semana01.html"> Semana 1</a></li>
-            <li><a href="S2/semana2.html"> Semana 2</a></li>
-        </ul>
+    <!-- Conteúdo do seu site -->
+    <div>
+        <h1 class="text-center">ATIVIDADES 1º SEMESTRE</h1>
+    </div>
+
+    <!-- Barra de Navegação Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Laboratorio de Engenharia de Software</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="S1/semana01.html">Semana 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="S2/semana02.html">Semana 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="S3/semana03.html">Semana 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="S4/semana04.html">Semana 4</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+
+    <!-- Adicione os scripts do Bootstrap JavaScript (opcional, se necessário) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
