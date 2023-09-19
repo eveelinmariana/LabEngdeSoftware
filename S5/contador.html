@@ -15,10 +15,10 @@
 
   <div id="genderContainer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
     <div>
-      Homem <img id="maleImage" src="homem.png">
+      Homem <img id="homemImg" src="homem.png">
     </div>
     <div>
-      Mulher <img id="femaleImage" src="mulher.png">
+      Mulher <img id="mulherImg" src="mulher.png">
     </div>
   </div>
 
@@ -29,29 +29,13 @@
     <img id="removerMulher" src="retirar.png" style="cursor: pointer;">
   </div>
 
-  <div id="totalCountContainer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+  <div id="totalCountContainer" >
     Total Homem <span id="totalHomem">0</span>
     Total Mulher <span id="totalMulher">0</span>
   </div>
 
   <script>
-    
-    const styleElements = [
-      ['counter', 'font-size: 24px; text-align: center;'],
-      ['genderContainer', 'display: flex; justify-content: space-between; align-items: center; margin-top: 20px;'],
-      ['iconContainer', 'display: flex; justify-content: space-between; align-items: center; margin-top: 10px;'],
-      ['addHomem', 'cursor: pointer;'],
-      ['removerHomem', 'cursor: pointer;'],
-      ['addMulher', 'cursor: pointer;'],
-      ['removerMulher', 'cursor: pointer;']
-    ];
-
-    styleElements.forEach(([elementId, styles]) => {
-      const element = document.getElementById(elementId);
-      element.style.cssText = styles;
-    });
-
-    const imageElements = ['maleImage', 'femaleImage', 'addHomem','removerHomem','addMulher', 'removerMulher', "atualizar"];
+    const imageElements = ['homemImg', 'mulherImg', 'addHomem','removerHomem','addMulher', 'removerMulher', "atualizar"];
 
     imageElements.forEach((elementId) => {
       const image = document.getElementById(elementId);
@@ -61,17 +45,20 @@
       image.style.borderRadius = '50%';
     });
 
+    const divHomem = ['homemImg','addHomem','removerHomem'];
+
+    divHomem.forEach((elementId) =>{
+      const div = document.getElementById(elementId);
+      div.style.border = '5px solid black'
+    })
+
     //total
     const total = document.getElementById('total');
     total.style.fontSize = '36px';
-    
 
     const totalCountElement = document.getElementById('totalCount');
     totalCountElement.style.fontSize = '36px';
 
-   
-
-    
     let totalCount = 0;
     let totalHomem = 0;
     let totalMulher = 0;
@@ -119,8 +106,8 @@
 
     function updateCounts() {
       totalCountElement.textContent = totalCount;
-      totalHomemElement.textContent = totalHomem;
-      totalMulherElement.textContent = totalMulher;
+      totalHomemElement.textContent = totalHomem; 
+      totalMulherElement.textContent = totalMulher; 
     }
   </script>
 </body>
