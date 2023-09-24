@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionando React à minha página</title>
+
+    <style>
+      #root {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        background-color: #a71515;
+        color: #ffffff;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+    </style>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      let count = 0;
+      let phraseNow = "";
+      const myPhrase = "Venha estudar na Fatec!";
+      let isRendering = true;
+
+      const phraseLength = (phrase) => {
+        return phrase.length;
+      };
+
+      function getLetter(phrase) {
+        return (phraseNow += phrase[count]);
+      }
+
+      function MyLabel({ phrase }) {
+        return <h2>{phrase}</h2>;
+      }
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+
+      function tick() {
+        if (!isRendering) {
+          root.render(null);
+
+          if (count === phraseLength(myPhrase)) {
+            count = 0;
+            phraseNow = "";
+            isRendering = true;
+          }
+        } else {
+          let phraseNow = getLetter(myPhrase);
+          root.render(<MyLabel phrase={phraseNow} />);
+          count++;
+
+          if (count === phraseLength(myPhrase)) {
+            isRendering = false;
+          }
+        }
+      }
+
+      setInterval(tick, 500);
+    </script>
+  </body>
+</html>
